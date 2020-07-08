@@ -1,0 +1,167 @@
+.section {
+  margin-bottom: 4rem;
+}
+
+.service,
+.testimonial {
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s;
+  border-top: 5px solid $color-grey;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    display: block;
+    height: 5px;
+    background: $secondary-color;
+    width: 0;
+    transition: width 0.5s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.18);
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0.6rem;
+  }
+}
+
+.services-container,
+.testimonials-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+// .testimonials-wrapper {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+//   gap: 2rem;
+// }
+
+//hero section styles
+.hero {
+  .hero-container {
+    display: flex;
+    background: $primary-color;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .hero-left {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    line-height: 1.4;
+  }
+
+  .cta {
+    color: $color-white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    background: $secondary-color;
+    border: 2px solid $secondary-color;
+    margin-top: 2rem;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+//services section styles
+.services {
+  g,
+  svg {
+    transition: transform 0.3s fill;
+  }
+
+  .service:hover g,
+  .service:hover svg {
+    fill: $secondary-color;
+  }
+}
+
+//contact section styles
+.form {
+  .form-container {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    padding: 0.8rem 1.2rem;
+  }
+
+  textarea {
+    resize: none;
+    padding: 1.2rem;
+    overflow: auto;
+  }
+
+  button {
+    color: $color-white;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    text-transform: capitalize;
+    background: $secondary-color;
+    transition: box-shadow 0.3s;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: 2px solid $secondary-color;
+  }
+}
+
+//hero section mq
+@media screen and (min-width: 750px) {
+  .hero-flex {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+//services section mq
+@media screen and (min-width: 750px) {
+}
+
+//contact section mq
+@media screen and (min-width: 750px) {
+  .form-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    .form-row:nth-child(5),
+    button {
+      grid-column: 1/3;
+    }
+  }
+}

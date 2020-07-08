@@ -1,0 +1,229 @@
+.layout-wrapper {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.hero-layout-wrapper {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-size: 62.5%;
+  font-family: "Work Sans", sans-serif; }
+
+h1 {
+  font-size: calc(1.8rem + 2vw);
+  font-weight: 600; }
+
+h2 {
+  font-size: calc(1.5rem + 0.5vw);
+  margin-bottom: 1rem; }
+
+h3 {
+  font-size: calc(1.3rem + 0.5vw); }
+
+p {
+  line-height: 1.8;
+  font-weight: 500; }
+
+h2,
+h3 {
+  text-transform: capitalize;
+  font-weight: 600; }
+
+h1,
+h2,
+h3,
+label,
+textarea {
+  color: #011638; }
+
+p,
+input {
+  color: rgba(1, 22, 56, 0.8); }
+
+p,
+label,
+input,
+textarea,
+button {
+  font-size: calc(1.2rem + 0.1vw); }
+
+a {
+  font-size: calc(0.8rem + 0.4vw); }
+
+.footer {
+  color: #fff;
+  padding: 2rem 0;
+  background: #011638; }
+  .footer g {
+    fill: #fff; }
+  .footer p {
+    color: inherit; }
+
+.header {
+  color: #000;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 0 1.7rem rgba(0, 0, 0, 0.2); }
+  .header .progress {
+    background: linear-gradient(to right, #011638, var(--scroll), transparent 0);
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 72.2px;
+    width: 100%;
+    height: 5px;
+    z-index: 1; }
+  .header .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .header svg g {
+    fill: #011638; }
+  .header ul {
+    list-style: none;
+    display: flex;
+    text-transform: capitalize; }
+  .header li:not(:last-child) {
+    margin-right: 1rem; }
+  .header a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    transition: color 0.3s; }
+    .header a:hover {
+      color: #011638; }
+
+.section {
+  margin-bottom: 4rem; }
+
+.service,
+.testimonial {
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s;
+  border-top: 5px solid #a1a1a1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+  .service::before,
+  .testimonial::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    display: block;
+    height: 5px;
+    background: #011638;
+    width: 0;
+    transition: width 0.5s; }
+  .service:hover,
+  .testimonial:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.18); }
+    .service:hover::before,
+    .testimonial:hover::before {
+      width: 100%; }
+  .service h3,
+  .testimonial h3 {
+    margin-bottom: 0.6rem; }
+
+.services-container,
+.testimonials-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem; }
+
+.hero .hero-container {
+  display: flex;
+  background: #a0c8eb;
+  flex-direction: column;
+  padding: 2rem 0; }
+
+.hero .hero-left {
+  margin-bottom: 2rem; }
+
+.hero h1 {
+  line-height: 1.4; }
+
+.hero .cta {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  background: #011638;
+  border: 2px solid #011638;
+  margin-top: 2rem;
+  font-weight: 500;
+  display: inline-block; }
+
+.hero img {
+  width: 100%; }
+
+.services g,
+.services svg {
+  transition: transform 0.3s fill; }
+
+.services .service:hover g,
+.services .service:hover svg {
+  fill: #011638; }
+
+.form .form-container {
+  display: grid;
+  gap: 2rem; }
+
+.form .form-row {
+  display: flex;
+  flex-direction: column; }
+
+.form label {
+  margin-bottom: 0.5rem; }
+
+.form input {
+  padding: 0.8rem 1.2rem; }
+
+.form textarea {
+  resize: none;
+  padding: 1.2rem;
+  overflow: auto; }
+
+.form button {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  text-transform: capitalize;
+  background: #011638;
+  transition: box-shadow 0.3s; }
+
+.form input:focus,
+.form textarea:focus {
+  outline: 2px solid #011638; }
+
+@media screen and (min-width: 750px) {
+  .hero-flex {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (min-width: 750px) {
+  .form-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr); }
+    .form-container .form-row:nth-child(5),
+    .form-container button {
+      grid-column: 1/3; } }

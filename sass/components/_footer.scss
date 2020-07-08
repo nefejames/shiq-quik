@@ -1,0 +1,13 @@
+.footer {
+  color: $color-white;
+  padding: 2rem 0;
+  background: $secondary-color;
+
+  g {
+    fill: $color-white;
+  }
+
+  p {
+    color: inherit;
+  }
+}
