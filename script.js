@@ -1,12 +1,18 @@
 const nav = document.querySelector("nav");
 const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll("li");
 
 navToggle.addEventListener("click", () => {
   nav.classList.toggle("open");
   navToggle.classList.toggle("color-change");
 });
 
-console.log(nav);
+[...navLinks].forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    nav.classList.toggle("open");
+    navToggle.classList.toggle("color-change");
+  });
+});
 
 const h = document.documentElement;
 const b = document.body;
