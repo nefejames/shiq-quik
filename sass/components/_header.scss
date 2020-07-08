@@ -5,8 +5,6 @@
   top: 0;
   left: 0;
   z-index: 1;
-  // border-top: 5px solid $color-black;
-
   box-shadow: 0 0 1.7rem rgba(0, 0, 0, 0.2);
 
   .progress {
@@ -30,32 +28,54 @@
     justify-content: space-between;
   }
 
+  p {
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  p.color-change {
+    color: $color-white;
+  }
+
   svg g {
     fill: $secondary-color;
   }
 
-  ul {
-    list-style: none;
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
-    text-transform: capitalize;
-  }
+    flex-direction: column;
+    padding: 2rem;
+    height: 40vh;
+    transform: translateX(-100%);
+    align-items: center;
+    background: $secondary-color;
+    transition: transform 0.3s;
 
-  li {
-    // font-size: 0.8rem;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      margin-top: 3rem;
+    }
 
-    &:not(:last-child) {
-      margin-right: 1rem;
+    li {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-white;
+      font-weight: 600;
+      transition: color 0.3s;
     }
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 600;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $secondary-color;
-    }
+  nav.open {
+    transform: translateX(0);
   }
 }

@@ -1,6 +1,12 @@
-// const servicesSection = document.getElementById("services");
-// const testimonialsSection = document.getElementById("testimonials");
-// const contactSection = document.getElementById("contact");
+const nav = document.querySelector("nav");
+const navToggle = document.querySelector(".nav-toggle");
+
+navToggle.addEventListener("click", () => {
+  nav.classList.toggle("open");
+  navToggle.classList.toggle("color-change");
+});
+
+console.log(nav);
 
 const h = document.documentElement;
 const b = document.body;
@@ -13,5 +19,3 @@ document.addEventListener("scroll", function () {
   scroll = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
   progress.style.setProperty("--scroll", scroll + "%");
 });
-
-console.log(progress);
