@@ -105,6 +105,7 @@ a {
     color: #011638; }
   .header ul {
     display: flex;
+    margin-top: 1rem;
     list-style: none; }
   .header li:not(:last-child) {
     margin-right: 2.5rem; }
