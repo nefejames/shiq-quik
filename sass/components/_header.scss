@@ -51,7 +51,7 @@
   }
 
   a {
-    font-size: calc(1rem + 0.2vw);
+    // font-size: calc(1rem + 0.2vw);
     color: $secondary-color;
     text-decoration: none;
   }
@@ -79,7 +79,7 @@
     }
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.4rem;
     }
 
     li:not(:last-child) {
@@ -95,7 +95,7 @@
     }
 
     nav.opened {
-      height: 30vh;
+      height: 35vh;
     }
   }
 }

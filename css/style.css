@@ -53,11 +53,13 @@ p,
 input {
   color: rgba(1, 22, 56, 0.8); }
 
+a,
 p,
 label,
 input,
 textarea,
 button {
+  font-weight: 500;
   font-size: calc(1.2rem + 0.1vw); }
 
 a {
@@ -107,7 +109,6 @@ a {
   .header li:not(:last-child) {
     margin-right: 2.5rem; }
   .header a {
-    font-size: calc(1rem + 0.2vw);
     color: #011638;
     text-decoration: none; }
   .header svg g {
@@ -127,7 +128,7 @@ a {
       padding: 2rem 0;
       flex-direction: column; }
     .header li {
-      margin-bottom: 1rem; }
+      margin-bottom: 1.4rem; }
     .header li:not(:last-child) {
       margin-right: 0; }
     .header label {
@@ -137,7 +138,7 @@ a {
       align-items: center;
       cursor: pointer; }
     .header nav.opened {
-      height: 30vh; } }
+      height: 35vh; } }
 
 .section {
   margin-bottom: 4rem; }
@@ -198,7 +199,6 @@ a {
   background: #011638;
   border: 2px solid #011638;
   margin-top: 2rem;
-  font-weight: 500;
   display: inline-block; }
 
 .hero img {
