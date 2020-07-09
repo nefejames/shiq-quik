@@ -61,7 +61,7 @@ button {
   font-size: calc(1.2rem + 0.1vw); }
 
 a {
-  font-size: calc(0.8rem + 0.4vw); }
+  font-size: calc(1.2rem + 0.4vw); }
 
 .footer {
   color: #fff;
@@ -75,10 +75,14 @@ a {
 .header {
   color: #000;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1;
+  width: 100%;
+  z-index: 2;
   box-shadow: 0 0 1.7rem rgba(0, 0, 0, 0.2); }
   .header .progress {
     background: linear-gradient(to right, #011638, var(--scroll), transparent 0);
@@ -92,41 +96,48 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-  .header p {
-    cursor: pointer;
-    z-index: 200; }
-  .header p.color-change {
-    color: #fff; }
+  .header input,
+  .header label {
+    display: none; }
+  .header label {
+    color: #011638; }
+  .header ul {
+    display: flex;
+    list-style: none; }
+  .header li:not(:last-child) {
+    margin-right: 2.5rem; }
+  .header a {
+    font-size: calc(1rem + 0.2vw);
+    color: #011638;
+    text-decoration: none; }
   .header svg g {
     fill: #011638; }
-  .header nav {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    height: 40vh;
-    transform: translateX(-100%);
-    align-items: center;
-    background: #011638;
-    transition: transform 0.3s; }
-    .header nav ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      text-transform: capitalize;
-      margin-top: 3rem; }
-    .header nav li {
+  @media screen and (max-width: 700px) {
+    .header nav {
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      left: 0;
+      height: 0;
+      overflow: hidden;
+      background: #fff;
+      transition: height 0.3s; }
+    .header ul {
+      text-align: center;
+      padding: 2rem 0;
+      flex-direction: column; }
+    .header li {
       margin-bottom: 1rem; }
-    .header nav a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      transition: color 0.3s; }
-  .header nav.open {
-    transform: translateX(0); }
+    .header li:not(:last-child) {
+      margin-right: 0; }
+    .header label {
+      display: inline-block;
+      padding: 0.2rem 0.8rem;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; }
+    .header nav.opened {
+      height: 30vh; } }
 
 .section {
   margin-bottom: 4rem; }
